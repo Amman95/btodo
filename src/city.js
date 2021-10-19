@@ -67,7 +67,7 @@ const state = {
     "Kuala Sungai Baru",
     "Pulau Sebang",
   ],
-  NegeriSembilan: [
+  Negeri_Sembilan: [
     "Seremban",
     "Port Dickson",
     "Nilai",
@@ -109,7 +109,7 @@ const state = {
     "Kampar",
   ],
   Perlis: ["Kangar", "Kuala Perlis"],
-  PulauPinang: [
+  Pulau_Pinang: [
     "Bukit Mertajam",
     "Georgetown",
     "Sungai Ara",
@@ -196,7 +196,7 @@ const state = {
     "Paka",
     "Jerteh",
   ],
-  WilayahPersekutuan: ["Kuala Lumpur", "Labuan", "Putrajaya"],
+  Wilayah_Persekutuan: ["Kuala Lumpur", "Labuan", "Putrajaya"],
 };
 
 export default state;
