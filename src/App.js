@@ -11,6 +11,7 @@ import Cooking from "./Cooking";
 import Relaxation from "./Relaxation";
 import Music from "./Music";
 import Busywork from "./Busywork";
+import Weather from "./component/weather.js";
 
 function App() {
   var filtered = data_array.filter((data) => data.type === "education");
@@ -43,10 +44,16 @@ function App() {
           </div>
         );
       })}
-    </div>
-  );
 
-  return (
+
+    <div className="App">
+      <h1> Weather App </h1>
+      <Weather />
+    </div>
+    );
+    }
+
+  {/* return (
     <>
       <Router>
         <div className="App">
@@ -104,6 +111,6 @@ const Home = () => (
       <button>Busywork</button>
     </Link>
   </div>
-);
+); */}
 
 export default App;
