@@ -1,12 +1,8 @@
-import "./App.css";
-import data_array from "./obj.js";
+import data_array from "../obj.js";
 
-function Relaxation() {
-  var filtered = data_array.filter((data) => data.type === "relaxation");
-  var recommends = data_array.filter(
-    (data) =>
-      data.price === 0.0 && data.accessibility === "Few to no challenges"
-  );
+function Music() {
+  var filtered = data_array.filter((data) => data.type === "music");
+
   const mappingFil = (
     <div className="category">
       {filtered.map((list) => {
@@ -24,11 +20,11 @@ function Relaxation() {
   return (
     <div className="App">
       <div id="bored-container">
-        <h2>Category: Relaxation</h2>
+        <h2>Category: Music</h2>
         {mappingFil}
       </div>
     </div>
   );
 }
 
-export default Relaxation;
+export default Music;

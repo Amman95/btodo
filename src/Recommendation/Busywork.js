@@ -1,12 +1,8 @@
-import "./App.css";
-import data_array from "./obj.js";
+import data_array from "../obj.js";
 
-function Charity() {
-  var filtered = data_array.filter((data) => data.type === "charity");
-  var recommends = data_array.filter(
-    (data) =>
-      data.price === 0.0 && data.accessibility === "Few to no challenges"
-  );
+function Busywork() {
+  var filtered = data_array.filter((data) => data.type === "busywork");
+
   const mappingFil = (
     <div className="category">
       {filtered.map((list) => {
@@ -24,11 +20,11 @@ function Charity() {
   return (
     <div className="App">
       <div id="bored-container">
-        <h2>Category: Charity</h2>
+        <h2>Category: Busy Work</h2>
         {mappingFil}
       </div>
     </div>
   );
 }
 
-export default Charity;
+export default Busywork;
