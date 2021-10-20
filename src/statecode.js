@@ -1,7 +1,7 @@
-import state from "./city";
+import state from "./city.js";
 
 const Codes = {
-  //   "MY-01: JOHOR, MY-02, MY-03. MY-04, MY-05, MY-06, MY-07, MY-08, MY-09, MY-10, MY-11, MY-12, MY-13, MY-14, MY-15",
+  None: "MY-00",
   Johor: "MY-01",
   Kedah: "MY-02",
   Kelantan: "MY-03",

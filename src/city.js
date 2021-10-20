@@ -30,7 +30,7 @@ const state = {
     "Sungai Petani",
     "Alor Setar",
     "Kulim",
-    "Jitra / Kubang Pasu",
+    "Jitra",
     "Baling",
     "Pendang",
     "Langkawi",
