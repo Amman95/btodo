@@ -28,28 +28,6 @@
   color: #61dafb;
 }
 
-.card {
-  height: 100px;
-  width: 500px;
-  background-color: powderblue;
-}
-
-
-.act {
-  width: 50rem;
-  height: 8rem;
-  font-size: 20px;
-  background-color: rgb(152, 173, 169);
-  border-radius: 20px;
-  justify-content:center;
-  align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-
-
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
@@ -58,6 +36,3 @@
     transform: rotate(360deg);
   }
 }
-
-
-
