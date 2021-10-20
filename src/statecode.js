@@ -1,5 +1,3 @@
-import state from "./city.js";
-
 const Codes = {
   None: "MY-00",
   Johor: "MY-01",
@@ -17,7 +15,5 @@ const Codes = {
   Sarawak: "MY-13",
   Wilayah_Persekutuan: "MY-14",
 };
-
-// const Mapping = Codes.map((code) => code);
 
 export default Codes;

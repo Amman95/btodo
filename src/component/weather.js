@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from "react";
-import { useMediaQuery } from "react-responsive";
 import state from "../city.js";
 import Codes from "../statecode.js";
 
@@ -8,7 +7,6 @@ const Weather = () => {
   const [selectedState, setSelectedState] = useState("");
   const [selectedCity, setSelectedCity] = useState("");
 
-  const stateNames = Object.keys(state);
   const handleStateChange = (e) => {
     setCities(state[e.target.value]);
     setSelectedState(Codes[e.target.value]);
