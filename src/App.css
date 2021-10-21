@@ -159,7 +159,6 @@ h3 {
   transform: scale(1.03, 1.03);
   transition-property: transform;
   transition-duration: 0.5s;
-  animation: ;
 }
 
 /* .category {
