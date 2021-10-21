@@ -9,7 +9,6 @@ const Images = {
   work: require("./hard-work.png").default,
   diy: require("./toolbox.png").default,
   relax: require("./meditation.png").default,
-
 };
 
 export default Images;

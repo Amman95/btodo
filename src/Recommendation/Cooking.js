@@ -18,5 +18,4 @@ function Cooking() {
     </div>
   );
 }
-
 export default Cooking;
