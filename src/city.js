@@ -116,6 +116,7 @@ const state = {
     "Bagan Serai",
     "Tanjung Malim",
     "Lawan Kuda Baharu",
+
     "Pantai Remis",
     "Kampar",
   ],

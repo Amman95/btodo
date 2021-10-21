@@ -38,7 +38,7 @@ const Weather = () => {
     if (selectedState !== "" || selectedCity !== "") {
       fetchData();
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
+
   }, [selectedCity]);
 
   return (
