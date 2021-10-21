@@ -1,30 +1,19 @@
 import data_array from "../obj.js";
-import "./Cat.css";
+import "./Rec.css";
+import { useHistory } from "react-router-dom";
+import FilterDisplay from "./Filter.js";
 
 function Diy() {
-  var filtered = data_array.filter((data) => data.type === "diy");
-
-  const mappingFil = (
-    <div className="category">
-      {filtered.map((list) => {
-        return (
-          <div id="card" key={list.id}>
-            <div className="card">
-              <h2>{list.activity}</h2>
-              <p>No. of participants: {list.participants}</p>
-              <p>Type: {list.type}</p>
-            </div>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const history = useHistory();
 
   return (
-    <div className="App">
-      <div id="bored-container">
-        <h2>Category: DIY</h2>
-        {mappingFil}
+    <div>
+      <button onClick={() => history.goBack()}>Back</button>
+      <div className="App">
+        <div id="bored-container">
+          <h2>Category: Diy</h2>
+          <FilterDisplay category="diy" data_array={data_array} />
+        </div>
       </div>
     </div>
   );
