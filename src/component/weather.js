@@ -22,7 +22,6 @@ const Weather = () => {
   useEffect(() => {
     console.log(selectedState);
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity},${selectedState}&appid=a497affed95ab5458861828d628571ee&units=metric`;
-
     const fetchData = async () => {
       try {
         const response = await fetch(url);
@@ -30,6 +29,7 @@ const Weather = () => {
         setResult(data);
         selectData(data.weather);
         console.log(data.weather);
+        console.log(data);
       } catch (error) {
         console.log("error", error);
       }
@@ -38,7 +38,6 @@ const Weather = () => {
     if (selectedState !== "" || selectedCity !== "") {
       fetchData();
     }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [selectedCity]);
 

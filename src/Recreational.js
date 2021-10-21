@@ -30,8 +30,7 @@ function Recreational() {
   return (
     <div className="App">
       <div id="bored-container">
-        {/* <h2>Recommended</h2>
-        {mappingRecs} */}
+
         <h2>Category: Recreational</h2>
         <button
           onClick={() => {
