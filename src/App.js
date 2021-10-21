@@ -9,7 +9,6 @@ import Cooking from "./Recommendation/Cooking";
 import Charity from "./Recommendation/Charity";
 import Sport from "./Recommendation/Sport";
 import Social from "./Recommendation/Social";
-import Recreation from "./Recommendation/Recreational";
 import Education from "./Recommendation/Education";
 import Cooking from "./Recommendation/Cooking";
 import Charity from "./Recommendation/Charity";
@@ -29,14 +28,6 @@ function App() {
         </Link>
         <Switch>
 
-          <Route path="/home" exact component={Home} />
-          <Route path="/education" component={Education} />
-          <Route path="/recreational" component={Recreational} />
-          <Route path="/social" component={Social} />
-          <Route path="/diy" component={Diy} />
-          <Route path="/charity" component={Charity} />
-          <Route path="/cooking" component={Cooking} />
-         <Route path="/relaxation" component={Relaxation} />
           <Route path="/" exact component={Home} />
           <Route path="/recreation" component={Recreation} />
           <Route path="/education" component={Education} />
