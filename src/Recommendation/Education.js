@@ -1,33 +1,21 @@
-import React from "react";
-
-function Education() {
-  return <h1>Education page</h1>;
-}
-
 import data_array from "../obj.js";
+import "./Rec.css";
+import { useHistory } from "react-router-dom";
+import FilterDisplay from "./Filter.js";
 
 function Education() {
-  var filtered = data_array.filter((data) => data.type === "education");
-
-  const mappingFil = (
-    <div className="category">
-      {filtered.map((list) => {
-        return (
-          <div id="card" key={list.id}>
-            <p>Activity: {list.activity}</p>
-            <p>No. of participants: {list.participants}</p>
-            <p>Type: {list.type}</p>
-          </div>
-        );
-      })}
-    </div>
-  );
+  const history = useHistory();
 
   return (
-    <div className="App">
-      <div id="bored-container">
-        <h2>Category: Education</h2>
-        {mappingFil}
+    <div>
+      <div className="top-bar">
+        <button onClick={() => history.goBack()}>Back</button>
+        <FilterDisplay category="education" data_array={data_array} />
+      </div>
+      <div className="App">
+        <div id="bored-container">
+          <h2>Category: Education</h2>
+        </div>
       </div>
     </div>
   );

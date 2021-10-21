@@ -25,38 +25,29 @@
 
 .App-link {
   color: #516469;
+}
 
+.top-bar{
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  width: 500px;
+}
+
+.card-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 
 .card {
   height: 100px;
   width: 500px;
-  background-color: powderblue;
-}
-
-
-.act {
-  width: 50rem;
-  height: 8rem;
-  font-size: 20px;
-  background-color: rgb(152, 173, 169);
-  border-radius: 20px;
-  justify-content:center;
+  margin: 2px 0px;
+  background-color: rgb(140, 163, 140);
+  justify-content: center;
   align-items: center;
-  margin-left: auto;
-  margin-right: auto;
-  
-}
-
-
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
 }
 
 .Weather {
@@ -79,9 +70,9 @@
 #box-container {
   display: inline-flex;
   align-items: center;
-  justify-content:space-evenly;
+  justify-content: space-evenly;
   width: 100%;
-  height:fit-content;
+  height: fit-content;
 }
 
 #box-button {

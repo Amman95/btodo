@@ -3,21 +3,15 @@ import "./App.css";
 import Weather from "./component/weather.js";
 import Categories from "./Categories";
 import Recommendation from "./Recommendation";
-import Recreation from "./Recommendation/Recreation";
+import Recreation from "./Recommendation/Recreational";
 import Education from "./Recommendation/Education";
 import Cooking from "./Recommendation/Cooking";
 import Charity from "./Recommendation/Charity";
-import Sport from "./Recommendation/Sport";
 import Social from "./Recommendation/Social";
-import Education from "./Recommendation/Education";
-import Cooking from "./Recommendation/Cooking";
-import Charity from "./Recommendation/Charity";
 import Diy from "./Recommendation/Diy";
-import Social from "./Recommendation/Social";
 import Relaxation from "./Recommendation/Relaxation";
 import Music from "./Recommendation/Music";
 import Busywork from "./Recommendation/Busywork";
-
 
 function App() {
   return (
@@ -27,7 +21,6 @@ function App() {
           <p className="Title"> BTodo App </p>
         </Link>
         <Switch>
-
           <Route path="/" exact component={Home} />
           <Route path="/recreation" component={Recreation} />
           <Route path="/education" component={Education} />
