@@ -3,6 +3,7 @@ import Carousel from "react-elastic-carousel";
 import { BrowserRouter as Route, BrowserRouter } from "react-router-dom";
 import Images from "./Images/Image";
 import "./App.css";
+import "./Categories/Cat.css";
 import { useHistory } from "react-router-dom";
 import Recreation from "./Categories/Recreational";
 import Education from "./Categories/Education";
@@ -36,7 +37,9 @@ function Categories() {
       <Route path="/music" component={Music} />
       <Route path="/busywork" component={Busywork} />
 
-      <h1 style={{ textAlign: "center" }}>Categories</h1>
+      <h1 style={{ textAlign: "center" }} className="animate">
+        Categories
+      </h1>
       <div className="Slider">
         <Carousel breakPoints={breakPoints}>
           <button
@@ -45,6 +48,7 @@ function Categories() {
             onClick={() => history.push("/recreation")}
           >
             <img src={Images.recreation} className="Logo" alt="" />
+            <br />
             <p>Recreational</p>
           </button>
           <button
@@ -53,6 +57,7 @@ function Categories() {
             onClick={() => history.push("/education")}
           >
             <img src={Images.education} className="Logo" alt="" />
+            <br />
             <p>Education</p>
           </button>
           <button
@@ -61,6 +66,7 @@ function Categories() {
             onClick={() => history.push("/cooking")}
           >
             <img src={Images.cooking} className="Logo" alt="" />
+            <br />
             <p>Cooking</p>
           </button>
           <button
@@ -69,6 +75,7 @@ function Categories() {
             onClick={() => history.push("/charity")}
           >
             <img src={Images.charity} className="Logo" alt="" />
+            <br />
             <p>Charity</p>
           </button>
           <button
@@ -77,6 +84,7 @@ function Categories() {
             onClick={() => history.push("/diy")}
           >
             <img src={Images.diy} className="Logo" alt="" />
+            <br />
             <p>DIY</p>
           </button>
           <button
@@ -85,6 +93,7 @@ function Categories() {
             onClick={() => history.push("/social")}
           >
             <img src={Images.social} className="Logo" alt="" />
+            <br />
             <p>Social</p>
           </button>
           <button
@@ -93,6 +102,7 @@ function Categories() {
             onClick={() => history.push("/music")}
           >
             <img src={Images.music} className="Logo" alt="" />
+            <br />
             <p>Music</p>
           </button>
           <button
@@ -101,6 +111,7 @@ function Categories() {
             onClick={() => history.push("/busywork")}
           >
             <img src={Images.work} className="Logo" alt="" />
+            <br />
             <p>Busy Work</p>
           </button>
           <button
@@ -109,6 +120,7 @@ function Categories() {
             onClick={() => history.push("/relax")}
           >
             <img src={Images.relax} className="Logo" alt="" />
+            <br />
             <p>Relaxation</p>
           </button>
         </Carousel>

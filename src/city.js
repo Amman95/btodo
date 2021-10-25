@@ -1,3 +1,4 @@
+// Fetching State and Cities data
 const state = {
   Johor: [
     "Johor Bahru",
@@ -143,6 +144,8 @@ const state = {
     "Klang",
     "Shah Alam",
     "Petaling Jaya",
+    "Cyberjaya",
+    "Ampang",
     "Cheras",
     "Kajang",
     "Selayang",

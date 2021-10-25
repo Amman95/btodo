@@ -1,7 +1,9 @@
 import React, { useEffect, useState } from "react";
 import state from "../city.js";
 import Codes from "../statecode.js";
+import "./weather.css";
 
+// usestate declaration
 const Weather = () => {
   const [cities, setCities] = useState([]);
   const [selectedState, setSelectedState] = useState("");
@@ -9,6 +11,7 @@ const Weather = () => {
   const [result, setResult] = useState({});
   const [data, selectData] = useState([]);
 
+  // Event pass the value to setcities and setSelectedCity
   const handleStateChange = (e) => {
     setCities(state[e.target.value]);
     setSelectedState(Codes[e.target.value]);
@@ -18,7 +21,21 @@ const Weather = () => {
     console.log(e.target.value);
     setSelectedCity(e.target.value);
   };
+  // Depending of the weather forecast it changes
+  const getBackgroundColor = (weather) => {
+    if (weather === "Thunderstorm") {
+      return "#6B7280";
+    } else if (weather === "Drizzle") {
+      return "#D1D5DB";
+    } else if (weather === "Rain") {
+      return "#9CA3AF";
+    } else if (weather === "Clear") {
+      return "#93C5FD";
+    }
 
+    return "#F3F4F6";
+  };
+  // trigger when selected city changes
   useEffect(() => {
     console.log(selectedState);
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${selectedCity},${selectedState}&appid=a497affed95ab5458861828d628571ee&units=metric`;
@@ -43,9 +60,15 @@ const Weather = () => {
   }, [selectedCity]);
 
   return (
-    <div className="Container">
-      <div>{result?.main?.temp}</div>
-      <div>
+    <div
+      className="Container"
+      style={{ backgroundColor: getBackgroundColor(data[0]?.main) }}
+    >
+      {result?.main?.temp && (
+        <div className="temperature">{`${result?.main?.temp} °C`}</div>
+      )}
+
+      <div className="weatherCondition">
         {data?.map((d) => (
           <p key={d.description}>
             {d.main} : {d.description}
@@ -56,30 +79,34 @@ const Weather = () => {
           </p>
         ))}
       </div>
-
-      <label htmlFor="state">Choose a state:</label>
-      <select name="states" onChange={handleStateChange}>
-        <option value="none">None</option>
-        {Object.keys(state).map((s) => {
-          return (
-            <option key={s} value={s}>
-              {s.replace("_", " ")}
-            </option>
-          );
-        })}
-      </select>
-
-      <label htmlFor="city">Choose a city:</label>
-      <select name="city" onChange={handleCityChange}>
-        <option value="none">None</option>
-        {cities.map((c) => {
-          return (
-            <option key={c} value={c}>
-              {c}
-            </option>
-          );
-        })}
-      </select>
+      <div className="SC">
+        <label htmlFor="state">Choose a state:</label>
+        <select name="states" onChange={handleStateChange}>
+          <option value="none">None</option>
+          {Object.keys(state).map((s) => {
+            return (
+              <option key={s} value={s}>
+                {s.replace("_", " ")}
+              </option>
+            );
+          })}
+        </select>
+        <br />
+        <label htmlFor="city"> Choose a city:</label>
+        <select name="city" onChange={handleCityChange}>
+          <option value="none">None</option>
+          {cities.map((c) => {
+            return (
+              <option key={c} value={c}>
+                {c}
+              </option>
+            );
+          })}
+        </select>
+      </div>
+      <div className="wave -one"></div>
+      <div className="wave -two"></div>
+      <div className="wave -three"></div>
     </div>
   );
 };
